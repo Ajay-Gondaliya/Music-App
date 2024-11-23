@@ -9,6 +9,13 @@ const { protect } = require("./middleware/authMiddleware");
 require('dotenv').config();
 
 const app = express();
+aap.use(cors(
+    {
+        origin: ["https://music-app-cdhk.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 dbConnect();
 
